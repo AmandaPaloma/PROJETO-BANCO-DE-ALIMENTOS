@@ -1,9 +1,10 @@
-import logo_bma from"../img/logo_bma.png"
+import logo_bma from"../img/logo_bma1.png"
+import styles from "./MenuHome.module.css";
 
 function MenuHome() {
     return (
-        <div id="menu">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div id= "Menu">
+            <nav class="navbar navbar-expand-lg navbar-light" style={{backgroundColor: "#21715B"}}>
                     <img src={logo_bma} width="35" height="35" alt="Logo_Bma"></img>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">

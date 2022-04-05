@@ -1,0 +1,33 @@
+.navbar{
+    display:flex; 
+    justify-content: space-between;
+    background-color:#21715B;
+}
+
+.list{
+    display:flex;
+    list-style: none;
+    align-items: center;
+
+}
+
+.item{
+    margin-right: 1em;
+    font-size: 22px;
+}
+
+.item a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.item a:hover{
+    color: #ffbb33;
+}
+
+.person_icon{
+    font-size: 2em;
+    color:#fff;
+    padding-right:7px;
+
+}
