@@ -1,0 +1,21 @@
+.Card{
+    position: relative;
+    height: fit-content;
+    padding-top: 0.5%;
+    bottom: 0;
+    
+}
+
+.cardTitle{
+    text-align: center;
+    padding-top: 0.5em;
+    color:rgb(110, 110, 110);
+    
+}
+
+.imgFood{
+  position: relative;
+  left: 32%;
+  margin-top: 5%;
+  
+}

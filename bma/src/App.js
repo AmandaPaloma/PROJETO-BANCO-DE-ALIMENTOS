@@ -6,8 +6,10 @@ import SobreNos from './components/pages/SobreNos'
 import Parceiros from './components/pages/Parceiros'
 import Container from './components/layouts/Container'
 import Navbar from './components/layouts/Navbar'
+import DashBoard from './components/layouts/DashBoard'
 import Footer from './components/layouts/Footer'
 import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 function App() {
   return (
@@ -22,7 +24,6 @@ function App() {
           <Route path="/PortalBeneficiario" element={<PortalBeneficiario />} />
         </Routes>
       </Container>
-
       <Footer/>
     </Router>
 
