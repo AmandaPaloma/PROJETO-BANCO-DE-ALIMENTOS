@@ -11,7 +11,7 @@ function Dashboard() {
         <CardGroup className={styles.Card}>
             <Card >
                 <Card.Body className={styles.cardShadow}>
-                    <Card.Title className={styles.cardTitle}>36 INSTITUIÇÕES ATENDIDAS</Card.Title>
+                    <Card.Title className={styles.cardTitle} style={{fontSize:16}}>36 INSTITUIÇÕES ATENDIDAS</Card.Title>
                     
                     <Card.Text>
                     <img  src={instituicao} className={styles.imgFood}/>
@@ -20,7 +20,7 @@ function Dashboard() {
             </Card>
             <Card>
                 <Card.Body className={styles.cardShadow} >
-                    <Card.Title className={styles.cardTitle}>130 FAMÍLIAS BENEFICIADAS</Card.Title>
+                    <Card.Title className={styles.cardTitle} style={{fontSize:16}}>130 FAMÍLIAS BENEFICIADAS</Card.Title>
                     <Card.Text>
                     <img  src={familia} className={styles.imgFood}/>   
                     </Card.Text>
@@ -28,7 +28,7 @@ function Dashboard() {
             </Card>
             <Card >
                 <Card.Body className={styles.cardShadow}>
-                    <Card.Title className={styles.cardTitle}> + DE 115 TONELADAS DE ALIMENTOS DOADOS</Card.Title>
+                    <Card.Title className={styles.cardTitle} style={{fontSize:16}}>+ DE 115 TONELADAS DE ALIMENTOS DOADOS</Card.Title>
                     <Card.Text>
                         <img  src={donation} className={styles.imgFood}/>
                     </Card.Text>
@@ -36,7 +36,7 @@ function Dashboard() {
             </Card>
             <Card >
                 <Card.Body className={styles.cardShadow}>
-                    <Card.Title className={styles.cardTitle}>PARCERIA COM A AGRICULTURA FAMILIAR</Card.Title>
+                    <Card.Title className={styles.cardTitle} style={{fontSize:16}}>PARCERIA COM A AGRICULTURA FAMILIAR</Card.Title>
                     <Card.Text>
                     <img  src={agricultura} className={styles.imgFood}/>
                     </Card.Text>
