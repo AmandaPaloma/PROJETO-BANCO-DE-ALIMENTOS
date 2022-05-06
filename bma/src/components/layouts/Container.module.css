@@ -1,13 +1,13 @@
 .Container{
-    width:1200px;
+    width:100%;
     display: flex;
     margin: 0 auto; 
     flex-wrap:wrap;
 }
 
-.min-height{
+/*.min-height{
     min-height: 83%;
-}
+}*/
 
 .start{
     justify-content: flex-start;
