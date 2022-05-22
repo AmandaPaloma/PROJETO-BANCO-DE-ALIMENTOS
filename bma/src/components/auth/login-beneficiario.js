@@ -6,7 +6,7 @@ import familyGroup from '../../img/family-group.png';
 function LoginBen(){
 return (
     <div className={styles.group}>
-        <h1 className="title">•Portal do Beneficiário•</h1>
+        <h1 className="title">• Portal do Beneficiário</h1>
         <div>
         <img src={familyGroup} className={styles.img} alt="" />
         </div>
@@ -14,7 +14,7 @@ return (
         <form className={styles.card} id="formLogin">
             <h2 className={styles.h2}>Seja bem-vindo à sua central de consultas !<hr/></h2>
             <div className={styles.loginText}>
-                <span>Caso esteja cadastrado no progroama, insira seu CPF para acesso à central de consulta do beneficiário.</span>
+                <span>Caso esteja cadastrado no programa, insira seu CPF para acesso à central de consulta do beneficiário.</span>
                 </div>
             <div className="field">
                 <label htmlFor="CPF" className={styles.label}>CPF</label>

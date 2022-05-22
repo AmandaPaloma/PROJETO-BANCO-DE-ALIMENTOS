@@ -13,7 +13,7 @@ const LoginFunc =() => {
 return (
 
     <div className={styles.group} id="login">
-        <h1 className="title">•Login Funcionário•</h1>
+        <h1 className="title">• Login Funcionário</h1>
         <div>
         <img src={logFunc} className={styles.img} alt="" />
         </div>

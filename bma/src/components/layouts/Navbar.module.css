@@ -9,17 +9,17 @@
     display:flex;
     list-style: none;
     align-items: center;
-    margin-left: 8%;
+    margin-left: 8.5%;
 
 }
 
 .item{
     position: relative;
-    margin-top: 0.7em;
-    margin-right: 2em;
+    margin-top: 1em;
+    margin-right: 1.5em;
     font-size: 1.1em;
-    left: 0.6em;
-    font-weight: 600;
+    left: 0.8em;
+    font-weight: 550;
 
 }
 
@@ -34,10 +34,10 @@
 
 .person_icon{
     position: relative;
-    font-size: 2em;
+    font-size: 1.5em;
     color:rgb(255, 255, 255);
     padding-left: 1em;
-    padding-top: 0.2em;
+    padding-top: 0.5em;
     left:2.5%
     
     
@@ -61,12 +61,12 @@
     background-color:#86BCAA;
     height: fit-content;
     position: relative;
-    font-size: 1.1em;
+    font-size: 1rem;
     padding-left: 0.6em;
     padding-right: 0.6em;
     padding-top: 0.1em;
     border-radius: 55px;
-    margin-top: 1.5%;
+    margin-top: 1.8%;
     left:3%;
     
 }
