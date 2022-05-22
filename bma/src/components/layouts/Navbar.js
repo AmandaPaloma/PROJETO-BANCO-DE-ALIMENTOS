@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import Container from './Container'
 import styles from './Navbar.module.css'
 import Logo_bma from '../../img/logo_bma.png'
-import { FaUserCircle } from 'react-icons/fa';
 import { RiUserSettingsLine } from 'react-icons/ri';
 import { RiGroupLine } from 'react-icons/ri';
 

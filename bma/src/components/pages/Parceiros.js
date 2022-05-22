@@ -2,6 +2,7 @@ import parceiros from '../../img/parc.jpg'
 import styles from './Parceiros.module.css'
 
 
+
 function Parceiros (){
     return (
         <div>

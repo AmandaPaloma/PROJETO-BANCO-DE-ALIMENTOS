@@ -1,30 +1,23 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
-import Home from './components/pages/Home'
-import PortalBeneficiario from './components/pages/PortalBeneficiario'
-import PortalFuncionario from './components/pages/PortalFuncionario'
-import SobreNos from './components/pages/SobreNos'
-import Parceiros from './components/pages/Parceiros'
+import { BrowserRouter as Router } from 'react-router-dom'
 import Container from './components/layouts/Container'
 import Navbar from './components/layouts/Navbar'
-import DashBoard from './components/layouts/DashBoard'
 import Footer from './components/layouts/Footer'
+import AnimatedRoutes from './components/layouts/AnimatedRoutes'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
+
+
 function App() {
+
+
   return (
     <Router>
-      <Navbar/>
+      <Navbar />
       <Container customClass="min-height">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/SobreNos" element={<SobreNos/>} />
-          <Route path="/Parceiros" element={<Parceiros/>} />
-          <Route path="/PortalFuncionario" element={<PortalFuncionario />} />
-          <Route path="/PortalBeneficiario" element={<PortalBeneficiario />} />
-        </Routes>
+       <AnimatedRoutes />
       </Container>
-      <Footer/>
+      <Footer />
     </Router>
 
   )
