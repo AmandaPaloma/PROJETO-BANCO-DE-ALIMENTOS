@@ -1,4 +1,14 @@
+import LoginBen from "../auth/login-beneficiario";
+import {motion} from 'framer-motion'
+
 function PortalBeneficiario (){
-    return <h1>Portal Beneficiario</h1>
+    return( 
+        <motion.div 
+        initial={{ opacity: 0 }} 
+        animate={{ opacity: 1 }} 
+        exit={{ opacity: 0, transition: { duration: 0.3 } }}>
+        <LoginBen />
+    </motion.div>
+    )
 }
 export default PortalBeneficiario; 

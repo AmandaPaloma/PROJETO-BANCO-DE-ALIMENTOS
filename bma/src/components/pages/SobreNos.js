@@ -1,6 +1,7 @@
 import sobrenos from '../../img/sn3.jpg'
 import styles from './SobreNos.module.css'
 
+
 function SobreNos (){
     return (
         <div>
