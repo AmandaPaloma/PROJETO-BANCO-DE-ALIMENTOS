@@ -1,0 +1,60 @@
+{
+  "baskets": [
+    {
+      "cpf": "11111111111",
+      "cestabasica": "sim",
+      "quantcestabasica": "1",
+      "datecestabasica": "2022-05-23",
+      "localcestabasica": "CRAS",
+      "cestaverde": "sim",
+      "quantcestaverde": "1",
+      "datecestaverde": "2022-05-24",
+      "localcestaverde": "BMA",
+      "id": 1
+    },
+    {
+      "cpf": "22222222222",
+      "cestabasica": "sim",
+      "quantcestabasica": "1",
+      "datecestabasica": "2022-05-26",
+      "localcestabasica": "CRAS",
+      "cestaverde": "sim",
+      "quantcestaverde": "1",
+      "datecestaverde": "2022-05-27",
+      "localcestaverde": "BMA",
+      "id": 2
+    },
+    {
+      "cpf": "22222222222",
+      "cestabasica": "sim",
+      "quantcestabasica": "1",
+      "datecestabasica": "2022-05-26",
+      "localcestabasica": "CRAS",
+      "id": 3
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Cesta Verde"
+    },
+    {
+      "id": 2,
+      "name": "Cesta Basica"
+    }
+  ],
+  "beneficiarios": [
+    {
+      "id": 1,
+      "CPF": "111.111.111-11",
+      "name": "Maria José da Silva",
+      "situacao": "ativo"
+    },
+    {
+      "id": 2,
+      "CPF": "222.222.222-22",
+      "name": "Enzo José da Silva",
+      "situacao": "inativo"
+    }
+  ]
+}

@@ -1,19 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import styles from './login-funcionario.module.css';
 import logFunc from '../../img/logFunc.png';
+import { AuthContext} from "../../context/Auth";
 
-const LoginFunc =() => {
+const LoginFunc = ()=> {
+    const {authenticated, login} = useContext(AuthContext);
+    
+    
     const [cpf, setCpf] = useState("");
     const [password, setPassword] = useState("");
-
-    const handleSubmit =(event) => {
-        event.preventDefault();
+   
+    const handleSubmit = (e) => {
+        e.preventDefault();
         console.log("submit", {cpf, password});
-    };
+        login(cpf,password)
+    }
+
 return (
 
     <div className={styles.group} id="login">
         <h1 className="title">• Login Funcionário</h1>
+        
         <div>
         <img src={logFunc} className={styles.img} alt="" />
         </div>

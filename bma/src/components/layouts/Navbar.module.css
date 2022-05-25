@@ -1,5 +1,6 @@
 .navbar{
     display:flex; 
+    flex-direction: row;
     justify-content: space-between;
     background-color:#21715B;
     height: 4em;
@@ -7,6 +8,7 @@
 
 .list{
     display:flex;
+    flex-direction: row;
     list-style: none;
     align-items: center;
     margin-left: 8.5%;

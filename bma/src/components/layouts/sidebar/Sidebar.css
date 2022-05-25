@@ -1,26 +1,27 @@
 
 .nav-menu{
-   width: 200px;
+   width: 150px;
    height: 100vh;   
    display: flex;
    flex-direction: column;
-   position:fixed;
-   top: 0;
+   position:absolute;
+   
    left:0;
    padding: 6px 14px;
-   justify-content: left;
+   justify-content: start;
+   background: #21715B;
+   
+   
 }
 .nav-menu.active {
    left:0;
    transition: 350ms;
-   width: 450px;
+   width: 350px;
 }
 
 ul {
-     
    display: flex;
-   flex-direction: column;
-   background: #21715B;
+   flex-direction: column;   
    
 }
 
@@ -28,16 +29,20 @@ ul {
    list-style: none;
    position: relative;
    height: 100%;
-   width: 100%;
-   margin: 0px 5px;
-   padding: 30px 0px;
+   width: 300px;
+   justify-content: flex-start;
+   padding: 60px 0px;
 }
 
-.nav-text {
-   justify-content: start;
-   align-items: center;  
+.nav-text, .logout-text {
+   justify-content: start;     
    
 }
+.logout-text{
+   display: flex;
+   flex-direction: row;
+}
+
 .nav-text a{
    text-decoration: none;
    height: 100%;
@@ -45,10 +50,10 @@ ul {
    border-radius: 10px;
    transition: all 0.4 ease;
 }
-.nav-text span{
-   font-family: roboto, sans-serif;
+.nav-text span, .logout-text span{
+   font-family: Roboto Condesed, sans-serif;
    font-weight: 700;
-   font-size: 20px;
+   font-size: 1;
    color: #FFFFFF;
    display: flex;
    width: 500px;
@@ -59,6 +64,12 @@ ul {
    opacity: 0;
    
 }
+
+.nav-text img, .logout-text img{
+   width: 4em;
+   height:4em;
+   
+}
 .nav-menu.active .menu-title{
    opacity: 1;
 }
@@ -66,15 +77,18 @@ ul {
 .nav-menu.active .nav-text a:hover{
    background-color:#0E3127;
 }
- 
+ .nav-menu.active .logout-text:hover{
+   background-color:#0E3127;  
+
+ }
 .tooltip{
    position: absolute;
    background-color: #0E3127;
-   left:90px;
+   left:80px;
    top: 0;
    transform: translateY(50%);
-   height: 71px;
-   width: auto;
+   height: 50px;
+   width: 80px;
    align-items: center;
    justify-content: center; 
    transition: 0s;
@@ -92,11 +106,15 @@ ul {
 }
 .bma-logo{
    width: 120px;
-   height: 95px;
+   height: 120px;
    display: flex;
-   margin-left: 40px;
+   margin-left: 30px;
    align-items: center;
-   justify-content: center;  
+   justify-content: flex-start;
+   position: fixed;
+   top:0;
+   left:0
+     
    
 }
 .bma-logo img{
@@ -107,13 +125,17 @@ ul {
 
 .navbar-toggle{
    position: absolute;
-   left: 90%;  
+   top: 30px;
+   left: 120px; 
+   z-index:2 ; 
    
 }
 .navbar-open{
    position: absolute;
-   left: 90%;
+   top: 30px;
+   left: 320px;
    opacity: 0; 
+   z-index: 2;
 }
 .nav-menu.active .navbar-open{
    opacity: 1;
@@ -124,4 +146,12 @@ ul {
 .navbar-arrow{
    font-size: 24px;
    color:#A99F54;
-}   
+} 
+.logout{
+   margin-left: 20px;
+   font-size: 10px;
+   background-color:  #21715B;  
+   
+} 
+
+
