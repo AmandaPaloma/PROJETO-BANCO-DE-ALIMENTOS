@@ -27,7 +27,7 @@ export const AuthProvider =({children}) => {
 
         if (password === "secret"){ 
         setUser(loggeduser);
-        navigate("/centraldecestas");
+        navigate("/CentraldeCestas");
         }
     }
     const logout =() => {

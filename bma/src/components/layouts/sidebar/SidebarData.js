@@ -16,7 +16,7 @@ export const SidebarData = [
      {
       id: 2,
       title: 'Área do Beneficiário',
-      path: '/PaginaPadrao',
+      path: '/AreadoBeneficiario',
       icon: <img src={people}/>,
       cName: 'nav-text', 
      },

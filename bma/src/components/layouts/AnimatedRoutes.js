@@ -1,5 +1,5 @@
-import React from 'react'
-import { Route, Routes, useLocation } from 'react-router-dom'
+import {useContext} from 'react'
+import { Route, Routes, useLocation,Navigate } from 'react-router-dom'
 import PortalBeneficiario from '../pages/PortalBeneficiario'
 import PortalFuncionario from '../pages/PortalFuncionario'
 import Home from '../pages/Home'
@@ -9,10 +9,20 @@ import {AnimatePresence} from 'framer-motion'
 import AppRoutes from'../../AppRoutes'
 import CentraldeCestas from '../pages/central de cestas/CentraldeCestas'
 import PaginaPadrao from '../pages/central de cestas/PaginaPadrao'
-import { AuthProvider } from '../../context/Auth'
+import { AuthProvider,AuthContext } from '../../context/Auth'
+import AreadoBeneficiario from '../beneficiarios/AreadoBeneficiario'
 
 function AnimatedRoutes() {
     const location = useLocation();
+    const Private = ({children}) => {
+      const {authenticated,loading} = useContext(AuthContext);
+      if (loading) {
+          return <div className="loading">Carregando...</div>;
+      }
+      if (!authenticated) { 
+          return <Navigate to ="/PortalFuncionario"/>
+       } return children
+  }
 return (
     <AnimatePresence>
     <AuthProvider>
@@ -24,6 +34,7 @@ return (
     <Route path="/PortalBeneficiario" element={<PortalBeneficiario />} />
     <Route path="/CentraldeCestas" element={<CentraldeCestas/>} />
     <Route path="/PaginaPadrao" element={<PaginaPadrao/>}/>
+    <Route path="/AreadoBeneficiario" element={<AreadoBeneficiario/>}/>
   </Routes>
   </AuthProvider>
   </AnimatePresence>

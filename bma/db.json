@@ -2,34 +2,21 @@
   "baskets": [
     {
       "cpf": "11111111111",
+      "name": "Maria José da Silva",
       "cestabasica": "sim",
-      "quantcestabasica": "1",
-      "datecestabasica": "2022-05-23",
-      "localcestabasica": "CRAS",
       "cestaverde": "sim",
       "quantcestaverde": "1",
-      "datecestaverde": "2022-05-24",
+      "datecestaverde": "2022-06-04",
       "localcestaverde": "BMA",
       "id": 1
     },
     {
-      "cpf": "22222222222",
-      "cestabasica": "sim",
-      "quantcestabasica": "1",
-      "datecestabasica": "2022-05-26",
-      "localcestabasica": "CRAS",
-      "cestaverde": "sim",
-      "quantcestaverde": "1",
-      "datecestaverde": "2022-05-27",
-      "localcestaverde": "BMA",
+      "cpf": "11111111111",
       "id": 2
     },
     {
-      "cpf": "22222222222",
-      "cestabasica": "sim",
-      "quantcestabasica": "1",
-      "datecestabasica": "2022-05-26",
-      "localcestabasica": "CRAS",
+      "cpf": "44444444444",
+      "name": "Caique Brito",
       "id": 3
     }
   ],
@@ -46,15 +33,53 @@
   "beneficiarios": [
     {
       "id": 1,
-      "CPF": "111.111.111-11",
+      "CPF": "11111111111",
       "name": "Maria José da Silva",
       "situacao": "ativo"
     },
     {
       "id": 2,
-      "CPF": "222.222.222-22",
+      "CPF": "22222222222",
       "name": "Enzo José da Silva",
       "situacao": "inativo"
+    },
+    {
+      "CPF": "33333333333",
+      "name": "Valentina Cristina Pereira",
+      "datenascimento": "2022-05-27",
+      "cep": "11111111",
+      "city": "Poços de Caldas",
+      "state": "Minas Gerais",
+      "address": "Rua X",
+      "id": 3
+    },
+    {
+      "cep": "37718000",
+      "name": "Caique Brito",
+      "datenascimento": "1995-05-05",
+      "number": "s/n",
+      "id": 4
+    },
+    {
+      "cep": "37718000",
+      "name": "Caique Brito",
+      "datenascimento": "1995-05-05",
+      "number": "s/n",
+      "localidade": "Poços de Caldas",
+      "uf": "MG",
+      "logradouro": "Rodovia Geraldo Martins Costa",
+      "id": 5
+    },
+    {
+      "CPF": "44444444444",
+      "name": "Caique Brito",
+      "datenascimento": "1995-05-05",
+      "cep": "37701360",
+      "number": "s/n",
+      "localidade": "Poços de Caldas",
+      "uf": "MG",
+      "logradouro": "Avenida A",
+      "id": 7
     }
   ]
 }

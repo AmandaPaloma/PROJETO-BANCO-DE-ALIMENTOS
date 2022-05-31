@@ -22,7 +22,7 @@ function CestasContainer(){
 
     return(
         <div className='cesta_container'>
-            <h2>Cadastros</h2>        
+            <h3>Cadastros</h3>        
         {cestas.length >0 ?
         ((cestas.map((cesta) => (
            < DoacoesCard 

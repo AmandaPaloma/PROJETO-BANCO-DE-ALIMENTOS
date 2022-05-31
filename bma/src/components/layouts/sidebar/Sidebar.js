@@ -4,7 +4,7 @@ import BMALogo from './images/BMALogo.png';
 import * as BsIcons from 'react-icons/bs';
 import { SidebarData } from './SidebarData';
 import "./Sidebar.css";
-import logoutbutton from './images/logout.png';
+import {RiLogoutCircleRLine} from 'react-icons/ri'
 import person from './images/person.png';
 import { AuthContext } from '../../../context/Auth';
 
@@ -49,9 +49,9 @@ function Sidebar() {
         <ul className='nav-menu-items'> 
                            
           {SidebarData.map(renderSidebarData)}
-         <li className='logout-text'>
-         <img src = {person}/>
-        <span className='menu-title'>Logout<buton className = 'logout' onClick={handleLogout}><img src={logoutbutton}/></buton></span> 
+       <li className='logout-text'>
+        <img src = {person}/>
+        <span className='menu-title'>Logout<button className = 'logout' onClick={handleLogout}><RiLogoutCircleRLine/></button></span>
         
          </li>
         </ul>    

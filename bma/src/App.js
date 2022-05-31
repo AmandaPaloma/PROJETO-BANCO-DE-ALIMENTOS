@@ -8,6 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 
+
+
 function App() {
 
 
@@ -18,6 +20,7 @@ function App() {
        <AnimatedRoutes />
       </Container>
       <Footer />
+      
     </Router>
 
   )

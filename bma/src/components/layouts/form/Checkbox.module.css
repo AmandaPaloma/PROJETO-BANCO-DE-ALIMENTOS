@@ -1,6 +1,6 @@
 .checkbox_control{
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     margin-top: 2em;
     margin-bottom: 1em;
     
@@ -8,7 +8,7 @@
 .checkbox_control div{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    
 }
 .checkbox_control label{
     margin-bottom: 0.6em;
@@ -18,8 +18,7 @@
 
 .checkbox_control input{
     padding: 0.7em;
-    border-radius: 0;
-    border: none;
+    
       
     
     

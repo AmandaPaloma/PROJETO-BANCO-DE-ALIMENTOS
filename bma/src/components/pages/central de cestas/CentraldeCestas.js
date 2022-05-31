@@ -1,6 +1,6 @@
 import React from 'react';
 import Sidebar from '../../layouts/sidebar/Sidebar';
-import './CentraldeCestas.css';
+import styles from './CentraldeCestas.module.css';
 import CestasForm from '../../cestas/CestasForm';
 import CestasContainer from '../../cestas/CestasContainer';
 
@@ -8,9 +8,10 @@ import CestasContainer from '../../cestas/CestasContainer';
 
 
 
+
 function CentraldeCestas() {
    
-
+    
     function createPost(doacoes) {
             
         
@@ -22,6 +23,8 @@ function CentraldeCestas() {
             body: JSON.stringify(doacoes),
         })
         .then((resp) => resp.json)
+        
+        
         .catch((err) => console.log(err))
     }
 
@@ -32,15 +35,15 @@ function CentraldeCestas() {
                 <Sidebar/>
             </nav>
             
-            <div className='content'>
-                <div className='formtitle'>               
-                 <h1>Cadastro de Doações</h1>
+            <div className={styles.content}>
+                <div className={styles.formtitle}>               
+                 <h2>Cadastro de Doações</h2>
                 </div>
  
-                <div className='projectform'>
+                <div className={styles.projectform}>
                     <CestasForm handleSubmit={createPost} btnText="Cadastrar"/>
                 </div>
-                <div className='cestas'>
+                <div className={styles.cestas}>
                    
                     <CestasContainer/>
                 </div>

@@ -1,10 +1,10 @@
 import React from 'react';
-import './Checkbox.css';
+import styles from './Checkbox.module.css';
 
     function Checkbox({type, text, name,checked,value,handleOnChange,handleClick}) {
                         
         return (
-            <div className='checkbox_control'>
+            <div className={styles.checkbox_control}>
                 <div>
                     <label htmlFor={name}>{text}</label>
                 </div>

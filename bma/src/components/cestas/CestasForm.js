@@ -1,5 +1,5 @@
 import Input from '../layouts/form/Input';
-import './CestasForm.css';
+import styles from'./CestasForm.module.css';
 import Checkbox from '../layouts/form/Checkbox'
 import Submit from '../layouts/form/Submit';
 import { useEffect, useState } from 'react';
@@ -16,7 +16,8 @@ function CestasForm({handleSubmit, btnText, doacoesData}) {
     const [cbasica,setCbasica]=useState(false)
     const [cverde,setCverde]=useState(false)
     const [data, setData] = useState([]);
-           
+    const [name, setName] = useState('')  
+    const [suggestions, setSuggestions]=useState([])     
     const convertToArray =(obj)=>{
         const array = [obj];
         return array;
@@ -27,8 +28,8 @@ function CestasForm({handleSubmit, btnText, doacoesData}) {
    const submitHandler= (e) => {
        
         e.preventDefault();
-
-        const cpf = e.target.value; 
+        const {value} = e.target
+        const cpf =value.replace(/[^0-9]/g,'')
         const name= document.querySelector('input[name="name"]')       
              
         
@@ -45,17 +46,23 @@ function CestasForm({handleSubmit, btnText, doacoesData}) {
             .then((data)=> {
                 
                 setData(data)
+                
+
+                
+            })
+            .catch((err) => console.log(err))
+        }                      
+    
+    
+              
                
                 
                 
                 
              
                 
-            })
-            .catch((err) => console.log(err))
         
         
-        }                      
                         
         function submit(e) {
              e.preventDefault();
@@ -64,7 +71,9 @@ function CestasForm({handleSubmit, btnText, doacoesData}) {
          }
                 
          function handleChange(e) {
-             setDoacoes({...doacoes, [e.target.name]: e.target.value })             
+             setDoacoes({...doacoes, [e.target.name]: e.target.value })
+             
+                        
          }  
          
         
@@ -89,15 +98,16 @@ function CestasForm({handleSubmit, btnText, doacoesData}) {
             setCverde(!cverde)
             
         }   
-       
+      
                       
               
          return (
              
-             <form onSubmit = {submit} className='form'>
-                 <fieldset className='identificacao' >
+             <form onSubmit = {submit} className={styles.form}>
+                 <fieldset className={styles.identificacao} >
                      <legend>Identificação</legend>
-                     <div className='buscacpf'>
+                     <div className={styles.buscacpf}>
+                        <div>                        
                         <MaskedImput
                         text="CPF"
                         name="cpf"
@@ -106,22 +116,34 @@ function CestasForm({handleSubmit, btnText, doacoesData}) {
                         onChange={handleChange}
                         onBlur={submitHandler}                                    
                         />
-                         
-                                      
-                    </div>                   
+                    </div>
+     
+                                    
+                                    
                    
-                   <div className='resultado-buscaCPF'>
+                   <div>
                    
-                        {data.length > 0 ? (
+                   
+                    
+                    
+                   
+                    
+                   
+                   
+                      {data.length > 0 ? (
                             data.map((name)=> (
                                 <Input
                                     key={name.id}      
                                     type="text" 
                                     text="Nome do Beneficiário"
-                                    name={name.name}
-                                    value={name.name}                                                      
-                                    handleOnChange={{handleChange}}
+                                    name="name"
+                                    value={name.name}
+                                    onBlur={handleChange}
+                                    
+                                                                                      
+                                    
                                     />
+                                    
                         ))):(<Input
                             type="text"
                             text="Nome do Beneficiário"
@@ -129,17 +151,16 @@ function CestasForm({handleSubmit, btnText, doacoesData}) {
                         />)}
                        
                     </div>              
-                   
-                 </fieldset>       
+                </div>   
+                 </fieldset>     
                      
+                                        
                         
-                 
-                         
                                             
                    
-                 <fieldset className='baskets'>
-                    <legend> Tipo de Cesta</legend>
-                <div className='checkbox'>
+                 <fieldset className={styles.baskets}>
+                    <legend>Tipo de Cesta</legend>
+                <div className={styles.checkbox}>
                     <div>   
                         <Checkbox 
                             type="checkbox" 
@@ -181,7 +202,7 @@ function CestasForm({handleSubmit, btnText, doacoesData}) {
                      
                 </div>
      
-                 <div className='checkbox'>
+                 <div className={styles.checkbox}>
                  <div>
                     <Checkbox
                         type="checkbox" 
@@ -225,7 +246,7 @@ function CestasForm({handleSubmit, btnText, doacoesData}) {
                      
                  </div>
                  </fieldset>
-                 <div className='submit'>
+                 <div className={styles.submit}>
                      <Submit text={btnText}/>
                 </div>
          </form>

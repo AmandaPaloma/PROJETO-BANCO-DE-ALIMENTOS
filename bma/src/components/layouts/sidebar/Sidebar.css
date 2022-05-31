@@ -34,6 +34,7 @@ ul {
    padding: 60px 0px;
 }
 
+
 .nav-text, .logout-text {
    justify-content: start;     
    
@@ -43,7 +44,7 @@ ul {
    flex-direction: row;
 }
 
-.nav-text a{
+.nav-text a, .logout-text{
    text-decoration: none;
    height: 100%;
    display: flex;   
@@ -74,13 +75,10 @@ ul {
    opacity: 1;
 }
 
-.nav-menu.active .nav-text a:hover{
+.nav-menu.active .nav-text a:hover, .nav-menu.active .logout-text:hover{
    background-color:#0E3127;
 }
- .nav-menu.active .logout-text:hover{
-   background-color:#0E3127;  
-
- }
+ 
 .tooltip{
    position: absolute;
    background-color: #0E3127;
@@ -125,14 +123,14 @@ ul {
 
 .navbar-toggle{
    position: absolute;
-   top: 30px;
+   top: 10px;
    left: 120px; 
    z-index:2 ; 
    
 }
 .navbar-open{
    position: absolute;
-   top: 30px;
+   top: 10px;
    left: 320px;
    opacity: 0; 
    z-index: 2;
@@ -147,10 +145,18 @@ ul {
    font-size: 24px;
    color:#A99F54;
 } 
+
 .logout{
    margin-left: 20px;
-   font-size: 10px;
-   background-color:  #21715B;  
+   width: 2em;
+   height: 2em;
+   font-size: 1.5rem;
+   border: none;
+   border-radius: 50%; 
+   background-color: #8B0000;
+   color: #FFFFFF;
+   transform:rotate(270deg);
+   align-items: center;
    
 } 
 
