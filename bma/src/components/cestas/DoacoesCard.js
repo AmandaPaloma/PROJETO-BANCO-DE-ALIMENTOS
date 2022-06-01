@@ -2,10 +2,14 @@ import './DoacoesCard.css'
 import {BsPencil, BsFillTrashFill} from 'react-icons/bs'
 import { Link } from 'react-router-dom';
 
-function DoacoesCard({id, name, cpf,cestabasica, cestaverde, quantcestabasica,quantacestaverde,datacestabasica,datacestaverde,localcestabasica,localcestaverde}){
-
+function DoacoesCard({id, name, cpf,cestabasica, cestaverde, quantcestabasica,quantacestaverde,datacestabasica,datacestaverde,localcestabasica,localcestaverde, handleRemove}){
+    const remove =(e)=> {
+        e.preventDefault()
+        handleRemove(id)
+    }
     return(
         <div className='doacoes_card'>
+            
             <p>
                 <span>Nome do Beneficiário:</span>{name}
             </p>
@@ -28,8 +32,8 @@ function DoacoesCard({id, name, cpf,cestabasica, cestaverde, quantcestabasica,qu
                 <span>Local:</span>{localcestaverde}
             </p>  
             <div className='doacoes_card_actions'>
-                <Link to="/"><BsPencil/> Editar</Link>
-                <button>
+                {/*<Link to="/"><BsPencil/> Editar</Link>*/}
+                <button onClick={remove}>
                  <BsFillTrashFill/>Excluir
                 </button>
             </div>

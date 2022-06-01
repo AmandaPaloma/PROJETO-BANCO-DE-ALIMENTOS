@@ -10,6 +10,7 @@ import AppRoutes from'../../AppRoutes'
 import CentraldeCestas from '../pages/central de cestas/CentraldeCestas'
 import PaginaPadrao from '../pages/central de cestas/PaginaPadrao'
 import { AuthProvider,AuthContext } from '../../context/Auth'
+import CadastroBeneficiario from '../beneficiarios/CadastroBeneficiario'
 import AreadoBeneficiario from '../beneficiarios/AreadoBeneficiario'
 
 function AnimatedRoutes() {
@@ -34,7 +35,8 @@ return (
     <Route path="/PortalBeneficiario" element={<PortalBeneficiario />} />
     <Route path="/CentraldeCestas" element={<CentraldeCestas/>} />
     <Route path="/PaginaPadrao" element={<PaginaPadrao/>}/>
-    <Route path="/AreadoBeneficiario" element={<AreadoBeneficiario/>}/>
+    <Route path="/AreadoBeneficiario" element ={<AreadoBeneficiario/>}/>
+    <Route path="/CadastrodoBeneficiario" element={<CadastroBeneficiario/>}/>
   </Routes>
   </AuthProvider>
   </AnimatePresence>

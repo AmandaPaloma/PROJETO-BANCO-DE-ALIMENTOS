@@ -5,9 +5,8 @@ import Input from '../layouts/form/Input';
 import styles from "./cadastrobeneficiarioform.module.css"
 
 function CadastroForm({handleSubmit,btnText,beneficiariosData}){
-
-    const [beneficiarios,setBeneficiarios]=useState(beneficiariosData || {});
-    const [cpf, setCPF]=useState('');
+    
+    const [beneficiarios,setBeneficiarios]=useState(beneficiariosData || {});    
     const [data, setData] = useState([]);
     
     const convertToArray=(obj)=>{
@@ -34,15 +33,15 @@ function CadastroForm({handleSubmit,btnText,beneficiariosData}){
             .then((data)=> {
                 const array=convertToArray(data);
                 setData(array)
-                console.log(array)
-                
-                
-
                 
             })
             .catch((err) => console.log(err))
                            
     }
+                
+                
+
+                
     
     function handleChange(e) {
         setBeneficiarios({...beneficiarios, [e.target.name]: e.target.value })             
@@ -90,10 +89,11 @@ function CadastroForm({handleSubmit,btnText,beneficiariosData}){
                 /> 
                  </div> 
             </fieldset>     
+            
             <fieldset className={styles.localizacao}>
             <legend>Endereço</legend>  
                 <div className={styles.endereco}>
-                
+               <div> 
                 <MaskedImput
                     text="CEP"
                     name="cep"
@@ -140,12 +140,13 @@ function CadastroForm({handleSubmit,btnText,beneficiariosData}){
                     placeholder=""                              
                     /> )}       
                                             
-                               
+            </div>                   
             
             
             </div>
             
             <div className={styles.endereco}>
+            <div className={styles.street}>
             {data.length > 0 ? (data.map ((adress) =>(
                 <Input
                     key={adress.cep}                   
@@ -162,8 +163,10 @@ function CadastroForm({handleSubmit,btnText,beneficiariosData}){
                 text="Logradouro"
                 name="address"
                 placeholder=""                                
-                onBlur={handleChange}
                 />)}
+            </div>
+                <div>
+                    
                 
                 <Input
                     type="text" 
@@ -172,6 +175,8 @@ function CadastroForm({handleSubmit,btnText,beneficiariosData}){
                     placeholder=""                                
                     handleOnChange={handleChange}                 
                 /> 
+                
+                
                 <Input
                     type="text" 
                     text="Complemento"
@@ -179,6 +184,24 @@ function CadastroForm({handleSubmit,btnText,beneficiariosData}){
                     placeholder=""                                
                     handleOnChange={handleChange}                 
                 />  
+                {data.length > 0 ? (data.map ((adress) =>(
+                <Input
+                    key={adress.cep}                   
+                    type="text" 
+                    text="Bairro"
+                    name="bairro"
+                    value={adress.bairro}                               
+                    onBlur={handleChange}                
+                />
+               
+                ))):(
+            <Input
+                type="text" 
+                text="Bairro"
+                name="bairro"
+                placeholder=""                                
+                />)}
+                </div>
                 </div>                       
             
             </fieldset>  

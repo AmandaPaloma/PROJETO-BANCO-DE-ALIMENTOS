@@ -1,45 +1,39 @@
-import React from 'react';
-import Sidebar from '../layouts/sidebar/Sidebar';
-import CadastroForm from './CadastroForm';
-import styles from'./AreadoBeneficiario.module.css';
+import React from 'react'
+import { useLocation, Link } from 'react-router-dom'
+import BuscaCpf from './BuscaCpf'
+import Sidebar from '../layouts/sidebar/Sidebar'
+import styles from './AreadoBeneficiario.module.css'
+import Message from '../layouts/mensagem/Message'
 
 function AreadoBeneficiario(){
+   
+    const location = useLocation()
     
-    function createBenef(beneficiarios) {
-        fetch('http://localhost:5000/beneficiarios', {
-            method: 'POST',
-            headers: {
-                'Content-type':'application/json',
-            },
-            body: JSON.stringify(beneficiarios),
-        })
-        .then((resp)=> resp.json)
-        
-        .catch((err)=>console.log(err))
-        
+    let message = ''
+    if (location.state) {
+        message = location.state.message
+        console.log(message)
         
     }
-
-    return(
+    
+    
+   
+        return(
         <>
-            <nav>
-                <Sidebar/>
-            </nav>
-            
+           <Sidebar/>
             <div className={styles.content}>
-                <div className={styles.formtitle}>               
-                 <h1>Cadastro Beneficiário</h1>
-                 
-                </div>
- 
-                <div className={styles.beneficiariosform}>
-                    <CadastroForm handleSubmit={createBenef} btnText="Cadastrar"/>
+                <h2> Área do Beneficiário</h2>
+                {message && <Message type="success" msg={message}/>}
+            
+                <div className={styles.input_cpf}>
+                    <BuscaCpf/>
                 </div>
                 
-            </div>
             
+            </div>   
+        
+        
         </>
-    )
+)
 }
-
-export default AreadoBeneficiario;
+export default AreadoBeneficiario
