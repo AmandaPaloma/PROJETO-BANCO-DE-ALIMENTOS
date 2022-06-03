@@ -3,13 +3,35 @@ import MaskedImput from '../layouts/form/MaskedInput';
 import Submit from '../layouts/form/Submit';
 import Input from '../layouts/form/Input';
 import styles from "../beneficiarios/cadastrobeneficiarioform.module.css"
-
+import Select from 'react-select'
 
 
 function CadastroForm({handleSubmit,btnText,funcionarioData}){
   
+    const unidade = [
+        {label: 'CRAS Sul', value: 'CRAS Sul'}, 
+        {label: 'CRAS Leste', value: 'CRAS Leste'}, 
+        {label: 'CRAS Norte', value: 'CRAS Norte'}, 
+        {label: 'CRAS Oeste', value: 'CRAS Oeste'}, 
+        {label: 'BMA', value: 'CRAS BMA'}, 
+    ]
 
+
+    const perfil = [
+        {label: 'Administrador', value: 'Administrador'}, 
+        {label: 'Usuário BMA', value: 'Usuário BMA'}, 
+        {label: 'Usuário CRAS', value: 'Usuário CRAS'}, 
+    ]
     
+    const situacao = [
+        {label: 'Ativa', value: 'Ativa'}, 
+        {label: 'Suspensa', value: 'Suspensa'}, 
+        {label: 'Desativada', value: 'Desativada'}, 
+    ]
+    
+    const handleSelectChange = (event) =>{
+        console.log(event);
+    } 
 
     const [funcionarios,setFuncionarios]=useState(funcionarioData || {});
   
@@ -99,42 +121,29 @@ function CadastroForm({handleSubmit,btnText,funcionarioData}){
             <div className={styles.identificacao}>
 
 
-<div >
-
-<Input
-                         
-    type="text" 
-    text="Situação"
-    name="situação"
-    placeholder=""                                
-    handleOnChange={handleChange}                 
+            <div>
+        <label><b>Situação: </b></label>
+<Select
+options={situacao}
+onChange={handleSelectChange}
 />
-</div>
+    </div>
 
-<div >
-
-<Input
-                         
-    type="text" 
-    text="Perfil de Acesso"
-    name="perfil de acesso"
-    placeholder=""                                
-    handleOnChange={handleChange}                 
+<div>
+        <label><b>Perfil de Acesso: </b></label>
+<Select
+options={perfil}
+onChange={handleSelectChange}
 />
-</div>
+    </div>
 
-<div >
-              <Input
-                        
-   type="text" 
-   text="Unidade"
-   name="unidade"
-   placeholder=""                                
-   handleOnChange={handleChange}    
-   
-   
+<div>
+        <label><b>Unidade: </b></label>
+<Select
+options={unidade}
+onChange={handleSelectChange}
 />
-</div>
+    </div>
 
 </div>  
             
