@@ -1,2 +1,2 @@
-# grupo3-bma-pucmg-virtual
-Esse repositório é referente ao projeto desenvolvido pelo grupo 3 do curso Sistemas Web - PUC Minas Virtual
+
+Esse repositório refere-se ao Projeto desenvolvido para o Banco de Alimentos de Poços de Caldas no 2º período do curso de Tecnologia em sistemas para internet da Puc Minas.
